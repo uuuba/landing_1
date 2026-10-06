@@ -1,6 +1,6 @@
 import "./styles/base.css";
 import { getSettings, getPages } from "./api";
-import { hero } from "./blocks/hero/hero";
+import { render } from "./render";
 
 async function start() {
   // const settings = await getSettings();
