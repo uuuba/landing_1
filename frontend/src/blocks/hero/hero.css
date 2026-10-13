@@ -1,8 +1,10 @@
 .hero {
     display: grid;
-    gap: 32px;
+    width: min(1120px, calc(100% - 48px));
+    gap: clamp(36px, 7vw, 96px);
     align-items: center;
-    padding-block: 48px;
+    margin-inline: auto;
+    padding-block: clamp(72px, 10vw, 132px);
 }
 
 .hero__content {
@@ -12,45 +14,73 @@
 }
 
 .hero__badge {
-    padding: 4px 12px;
-    border-radius: 999px;
-    background: var(--color-accent-soft);
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
     color: var(--color-accent);
     font-size: 0.85rem;
     font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.hero__badge::before {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    content: "";
 }
 
 .hero__title {
     margin: 0;
-    font-size: clamp(2.2rem, 6vw, 4rem);
-    line-height: 1.05;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6.5vw, 5.7rem);
+    font-weight: 500;
+    letter-spacing: -0.055em;
+    line-height: 0.99;
 }
 
 .hero__subtitle {
     margin: 0;
     max-width: 45ch;
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 1.4vw, 1.12rem);
     color: var(--color-muted);
+    line-height: 1.8;
 }
 
 .hero__actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .hero__image {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 0.88;
     object-fit: cover;
-    border-radius: 24px;
-    background: var(--color-accent-soft);
+    border-radius: 180px 180px 18px 18px;
+    background: var(--color-surface);
+    box-shadow: 22px 22px 0 var(--color-accent-soft);
 }
 
 @media (min-width: 768px) {
     .hero {
-        grid-template-columns: 1fr 1fr;
-        min-height: 80vh;
+        grid-template-columns: 1.08fr 0.92fr;
+        min-height: min(760px, calc(100vh - 82px));
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        width: min(100% - 36px, 560px);
+        gap: 44px;
+    }
+
+    .hero__image {
+        max-height: 440px;
+        aspect-ratio: 1.15;
+        border-radius: 140px 140px 16px 16px;
+        box-shadow: 12px 12px 0 var(--color-accent-soft);
     }
 }

@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FishTrack - Рибальський сервіс</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;900&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <aside class="cookie-bar" id="cookieBar">
+      <p class="cookie-bar__text">
+        Ми використовуємо cookies для покращення вашого досвіду.
+        <a href="#" class="cookie-bar__link">Дізнатись більше</a>
+      </p>
+      <div class="cookie-bar__btns">
+        <button class="cookie-bar__btn btn btn--outline" id="cookieDecline">
+          Відхилити
+        </button>
+        <button class="cookie-bar__btn btn btn--primary" id="cookieAccept">
+          Прийняти
+        </button>
+      </div>
+    </aside>
+
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a href="#top" class="header__logo">
+          <img
+            src="images/значок.jpg"
+            alt="FishTrack логотип"
+            class="header__logo-img"
+          />
+          FishTrack
+        </a>
+
+        <nav class="header__nav" id="mainNav" aria-label="Головна навігація">
+          <ul class="header__nav-list">
+            <li><a href="#features" class="header__nav-link">Можливості</a></li>
+            <li>
+              <a href="#how-it-works" class="header__nav-link">Як працює</a>
+            </li>
+            <li><a href="#team" class="header__nav-link">Амбасадори</a></li>
+            <li><a href="#pricing" class="header__nav-link">Тарифи</a></li>
+            <li><a href="#cta" class="header__nav-link">Контакт</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="btn btn--ghost-dark"
+            id="themeToggle"
+            aria-label="Перемкнути тему"
+          >
+            🌙
+          </button>
+          <a href="#cta" class="btn btn--outline">Увійти</a>
+          <button class="btn btn--primary" id="openModal">Спробувати</button>
+        </div>
+
+        <button
+          class="header__burger"
+          id="burgerBtn"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+      <div class="drawer__overlay" id="drawerOverlay"></div>
+      <nav class="drawer__panel" aria-label="Мобільна навігація">
+        <button
+          class="drawer__close"
+          id="drawerClose"
+          aria-label="Закрити меню"
+        >
+          &times;
+        </button>
+        <ul class="drawer__list">
+          <li><a href="#features" class="drawer__link">Можливості</a></li>
+          <li><a href="#how-it-works" class="drawer__link">Як працює</a></li>
+          <li><a href="#team" class="drawer__link">Амбасадори</a></li>
+          <li><a href="#pricing" class="drawer__link">Тарифи</a></li>
+          <li><a href="#cta" class="drawer__link">Контакт</a></li>
+        </ul>
+        <div class="drawer__actions">
+          <a href="#cta" class="btn btn--outline btn--full">Увійти</a>
+          <button class="btn btn--primary btn--full" id="openModalDrawer">
+            Спробувати
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <span class="hero__badge">Рибальський сервіс №1 в Україні</span>
+            <h1 class="hero__title">
+              Лови більше.<br />
+              Відстежуй розумніше.<br />
+              <em>Просто. Зручно. Результат.</em>
+            </h1>
+            <p class="hero__desc">
+              Платформа для сучасного рибалки: карти водойм, журнал уловів,
+              прогноз клювання та спільнота однодумців - все в одному місці.
+            </p>
+            <div class="hero__btns">
+              <a href="#pricing" class="btn btn--primary btn--lg"
+                >Почати безкоштовно</a
+              >
+              <a href="#features" class="btn btn--ghost btn--lg"
+                >Дізнатися більше</a
+              >
+            </div>
+            <p class="hero__note">Без кредитної картки · 14 днів безкоштовно</p>
+          </div>
+
+          <div class="hero__visual">
+            <figure class="hero__img-wrap">
+              <img
+                src="images/hero-fishing.jpg"
+                alt="Рибалка на озері"
+                class="hero__img"
+              />
+            </figure>
+            <div class="hero__card hero__card--badge">
+              <span>7.4 кг сьогодні</span>
+            </div>
+            <div class="hero__card hero__card--stat">
+              <span class="hero__stat-num">421</span>
+              <span class="hero__stat-label">активних рибалок онлайн</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust" aria-label="Партнери">
+        <div class="container trust__inner">
+          <p class="trust__label">
+            Нам довіряють рибалки з провідними брендами
+          </p>
+          <ul class="trust__logos">
+            <li class="trust__logo-item">
+              <img
+                src="images/Rapala-Logo (1).png"
+                alt="Rapala"
+                class="trust__logo-img"
+              />
+            </li>
+            <li class="trust__logo-item">
+              <img src="images/daiwa.png" alt="Daiwa" class="trust__logo-img" />
+            </li>
+            <li class="trust__logo-item">
+              <img
+                src="images/images (1).png"
+                alt="Shimano"
+                class="trust__logo-img"
+              />
+            </li>
+            <li class="trust__logo-item">
+              <img
+                src="images/g-loomis-logo (1).png"
+                alt="G.Loomis"
+                class="trust__logo-img"
+              />
+            </li>
+            <li class="trust__logo-item">
+              <img
+                src="images/images (2).png"
+                alt="Pelagic"
+                class="trust__logo-img"
+              />
+            </li>
+            <li class="trust__logo-item">
+              <img
+                src="images/images.png"
+                alt="St.Croix"
+                class="trust__logo-img"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title">
+              Усе, що потрібно справжньому рибалці
+            </h2>
+            <p class="section-header__desc">
+              Від пошуку місця до аналізу уловів - FishTrack веде тебе на
+              кожному кроці
+            </p>
+          </header>
+
+          <div class="features__grid">
+            <article class="feature-card reveal">
+              <div class="feature-card__icon"></div>
+              <h3 class="feature-card__title">Карта водойм</h3>
+              <p class="feature-card__desc">
+                Інтерактивна карта з більш ніж 3 000 водойм України. Глибини,
+                рельєф дна, точки уловів від спільноти.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon"></div>
+              <h3 class="feature-card__title">Прогноз клювання</h3>
+              <p class="feature-card__desc">
+                Алгоритм на основі погоди, фаз місяця та сезонності показує
+                найкращі години для рибалки.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon"></div>
+              <h3 class="feature-card__title">Журнал уловів</h3>
+              <p class="feature-card__desc">
+                Зберігай записи про кожну рибалку: вид риби, вага, наживка,
+                погодні умови та фото трофея.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon"></div>
+              <h3 class="feature-card__title">Спільнота рибалок</h3>
+              <p class="feature-card__desc">
+                Форум, обмін точками, рейтинги уловів та локальні змагання.
+                Знайди своїх у будь-якому регіоні.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon"></div>
+              <h3 class="feature-card__title">Спорядження та зв'язки</h3>
+              <p class="feature-card__desc">
+                База вузлів, таблиці наживок по сезонах, інструкції з
+                налаштування снастей для початківців і профі.
+              </p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-card__icon"></div>
+              <h3 class="feature-card__title">Мобільний додаток</h3>
+              <p class="feature-card__desc">
+                Офлайн-карти, GPS-трекер маршруту та сповіщення про клювання
+                прямо на твій смартфон.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="how" id="how-it-works">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title">Як скористатися сервісом</h2>
+            <p class="section-header__desc">
+              Чотири простих кроки - і ти вже на воді з повним арсеналом
+              інструментів
+            </p>
+          </header>
+
+          <div class="how__timeline">
+            <article class="how__step reveal">
+              <div class="how__step-num">01</div>
+              <div class="how__step-icon"></div>
+              <h3 class="how__step-title">Реєстрація</h3>
+              <p class="how__step-desc">
+                Створи акаунт за 30 секунд. Жодної кредитної картки — одразу 14
+                днів повного доступу.
+              </p>
+            </article>
+
+            <article class="how__step reveal">
+              <div class="how__step-num">02</div>
+              <div class="how__step-icon"></div>
+              <h3 class="how__step-title">Обери водойму</h3>
+              <p class="how__step-desc">
+                Знайди ідеальне місце на інтерактивній карті. Фільтруй за рибою,
+                глибиною, відстанню.
+              </p>
+            </article>
+
+            <article class="how__step reveal">
+              <div class="how__step-num">03</div>
+              <div class="how__step-icon"></div>
+              <h3 class="how__step-title">Лови та фіксуй</h3>
+              <p class="how__step-desc">
+                Записуй улов просто з телефону: вид, вага, фото, наживка. Всі
+                дані зберігаються в хмарі.
+              </p>
+            </article>
+
+            <article class="how__step reveal">
+              <div class="how__step-num">04</div>
+              <div class="how__step-icon"></div>
+              <h3 class="how__step-title">Аналізуй і зростай</h3>
+              <p class="how__step-desc">
+                Переглядай статистику, порівнюй сезони, отримуй персональні
+                рекомендації від AI.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefit" id="benefit">
+        <div class="container benefit__inner">
+          <figure class="benefit__visual">
+            <img
+              src="images/group-fishing.jpg"
+              alt="Група рибалок з уловом"
+              class="benefit__img"
+            />
+          </figure>
+          <div class="benefit__content">
+            <span class="benefit__tag">Аналітика</span>
+            <h2 class="benefit__title">Рибалки, які знають свою статистику</h2>
+            <p class="benefit__desc">
+              FishTrack збирає дані з кожної сесії та будує аналітику: де краще
+              клює, яка наживка ефективніша, в який час рекордні улови.
+            </p>
+            <ul class="benefit__list">
+              <li class="benefit__list-item">Щоденна аналітика уловів</li>
+              <li class="benefit__list-item">
+                Теплова карта активності по водоймах
+              </li>
+              <li class="benefit__list-item">
+                Персональні рекомендації на основі AI
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefit benefit--reverse" id="benefit-alt">
+        <div class="container benefit__inner">
+          <div class="benefit__content">
+            <span class="benefit__tag">Зручність</span>
+            <h2 class="benefit__title">
+              Зручний інтерфейс на будь-якому пристрої
+            </h2>
+            <p class="benefit__desc">
+              Повноцінний доступ до всіх функцій через браузер на ноутбуці або
+              планшеті. Синхронізація з мобільним додатком у реальному часі.
+            </p>
+            <ul class="benefit__list">
+              <li class="benefit__list-item">
+                Адаптивний дизайн для Desktop та Mobile
+              </li>
+              <li class="benefit__list-item">
+                Офлайн-режим для роботи без інтернету
+              </li>
+              <li class="benefit__list-item">
+                Хмарне збереження всіх ваших даних
+              </li>
+            </ul>
+          </div>
+          <figure class="benefit__visual">
+            <img
+              src="images/laptop.png"
+              alt="FishTrack на ноутбуці"
+              class="benefit__img"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="stats" id="stats">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title">
+              Статистика, якій довіряють рибалки
+            </h2>
+          </header>
+          <div class="stats__grid">
+            <div class="stats__item reveal">
+              <span class="stats__num"
+                >74<span class="stats__unit">тис</span></span
+              >
+              <span class="stats__label">зареєстрованих рибалок</span>
+            </div>
+            <div class="stats__item reveal">
+              <span class="stats__num"
+                >3<span class="stats__unit">тис+</span></span
+              >
+              <span class="stats__label">водойм на карті</span>
+            </div>
+            <div class="stats__item reveal">
+              <span class="stats__num">421</span>
+              <span class="stats__label">онлайн прямо зараз</span>
+            </div>
+            <div class="stats__item reveal">
+              <span class="stats__num"
+                >7.4<span class="stats__unit">кг</span></span
+              >
+              <span class="stats__label">середній улов за сесію</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title">Що кажуть наші рибалки</h2>
+            <p class="section-header__desc">
+              Понад 74 000 рибалок вже обрали FishTrack своїм головним
+              інструментом
+            </p>
+          </header>
+
+          <div class="swiper reviews__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <div class="testimonial-card__quote" aria-hidden="true">
+                    &#8220;
+                  </div>
+                  <p class="testimonial-card__text">
+                    Нарешті додаток, який розуміє рибалок! Карта водойм — просто
+                    вогонь. Знайшов три нових місця біля Дніпра, про які не знав
+                    10 років.
+                  </p>
+                  <hr class="testimonial-card__divider" />
+                  <div class="testimonial-card__top">
+                    <figure class="testimonial-card__photo-wrap">
+                      <img
+                        src="images/амбсадор_1.jpg"
+                        alt="Василь Коваленко"
+                        class="testimonial-card__photo"
+                      />
+                    </figure>
+                    <div class="testimonial-card__meta">
+                      <strong class="testimonial-card__name"
+                        >Петро Мельничук</strong
+                      >
+                      <span class="testimonial-card__role"
+                        >Рибалка-аматор, Київ</span
+                      >
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="5 зірок">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <div class="testimonial-card__quote" aria-hidden="true">
+                    &#8220;
+                  </div>
+                  <p class="testimonial-card__text">
+                    Прогноз клювання спрацював 9 разів з 10. Тепер не виходжу на
+                    воду без FishTrack. Рекомендую всім, хто серйозно ставиться
+                    до рибалки.
+                  </p>
+                  <hr class="testimonial-card__divider" />
+                  <div class="testimonial-card__top">
+                    <figure class="testimonial-card__photo-wrap">
+                      <img
+                        src="images/амбасадор_2.jpg"
+                        alt="Олег Мельник"
+                        class="testimonial-card__photo"
+                      />
+                    </figure>
+                    <div class="testimonial-card__meta">
+                      <strong class="testimonial-card__name"
+                        >Назар Боженко</strong
+                      >
+                      <span class="testimonial-card__role"
+                        >Спортивний рибалка, Львів</span
+                      >
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="5 зірок">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <div class="testimonial-card__quote" aria-hidden="true">
+                    &#8220;
+                  </div>
+                  <p class="testimonial-card__text">
+                    Спіймав трофейного коропа 14 кг після того, як FishTrack
+                    показав ідеальну точку на карті. Сервіс реально працює!
+                  </p>
+                  <hr class="testimonial-card__divider" />
+                  <div class="testimonial-card__top">
+                    <figure class="testimonial-card__photo-wrap">
+                      <img
+                        src="images/амбасадор_3.jpg"
+                        alt="Дмитро Савченко"
+                        class="testimonial-card__photo"
+                      />
+                    </figure>
+                    <div class="testimonial-card__meta">
+                      <strong class="testimonial-card__name"
+                        >Ігор Сергієнко</strong
+                      >
+                      <span class="testimonial-card__role"
+                        >Фідерна рибалка, Дніпро</span
+                      >
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="5 зірок">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-card">
+                  <div class="testimonial-card__quote" aria-hidden="true">
+                    &#8220;
+                  </div>
+                  <p class="testimonial-card__text">
+                    Журнал уловів - мрія! Веду записи вже 8 місяців, тепер точно
+                    знаю, що і де ловиться в кожну пору року.
+                  </p>
+                  <hr class="testimonial-card__divider" />
+                  <div class="testimonial-card__top">
+                    <figure class="testimonial-card__photo-wrap">
+                      <img
+                        src="images/амбасадор_4jpg.jpg"
+                        alt="Наталія Сидоренко"
+                        class="testimonial-card__photo"
+                      />
+                    </figure>
+                    <div class="testimonial-card__meta">
+                      <strong class="testimonial-card__name"
+                        >Володимир Воротняк</strong
+                      >
+                      <span class="testimonial-card__role">Рибалка, Одеса</span>
+                    </div>
+                    <div class="testimonial-card__stars" aria-label="5 зірок">
+                      &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title">Оберіть свій тариф</h2>
+            <p class="section-header__desc">
+              Почніть безкоштовно. Розширте можливості коли будете готові.
+            </p>
+            <div class="pricing__toggle" role="group" aria-label="Тип оплати">
+              <button
+                class="pricing__toggle-btn pricing__toggle-btn--active"
+                data-period="monthly"
+              >
+                Щомісяця
+              </button>
+              <button class="pricing__toggle-btn" data-period="yearly">
+                Щороку <span class="pricing__save">-20%</span>
+              </button>
+            </div>
+          </header>
+
+          <div class="pricing__grid">
+            <article class="plan-card">
+              <h3 class="plan-card__name">Старт</h3>
+              <div class="plan-card__price">
+                <span class="plan-card__currency">₴</span>
+                <span class="plan-card__amount" data-monthly="0" data-yearly="0"
+                  >0</span
+                >
+                <span class="plan-card__period">/міс</span>
+              </div>
+              <p class="plan-card__desc">Для тих, хто тільки починає</p>
+              <ul class="plan-card__features">
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Карта водойм (базова)
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Журнал уловів (10 записів)
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Прогноз на 3 дні
+                </li>
+                <li class="plan-card__feature plan-card__feature--no">
+                  Розширена аналітика
+                </li>
+                <li class="plan-card__feature plan-card__feature--no">
+                  Офлайн-карти
+                </li>
+              </ul>
+              <a href="#cta" class="btn btn--outline btn--full"
+                >Почати безкоштовно</a
+              >
+            </article>
+
+            <article class="plan-card plan-card--featured">
+              <div class="plan-card__badge">Популярний</div>
+              <h3 class="plan-card__name">Про</h3>
+              <div class="plan-card__price">
+                <span class="plan-card__currency">₴</span>
+                <span
+                  class="plan-card__amount"
+                  data-monthly="299"
+                  data-yearly="239"
+                  >299</span
+                >
+                <span class="plan-card__period">/міс</span>
+              </div>
+              <p class="plan-card__desc">Для активних рибалок</p>
+              <ul class="plan-card__features">
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Карта водойм (повна)
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Необмежений журнал уловів
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Прогноз на 14 днів
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Розширена аналітика
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Офлайн-карти
+                </li>
+              </ul>
+              <a href="#cta" class="btn btn--primary btn--full"
+                >Спробувати 14 днів</a
+              >
+            </article>
+
+            <article class="plan-card">
+              <h3 class="plan-card__name">Експерт</h3>
+              <div class="plan-card__price">
+                <span class="plan-card__currency">₴</span>
+                <span
+                  class="plan-card__amount"
+                  data-monthly="799"
+                  data-yearly="639"
+                  >799</span
+                >
+                <span class="plan-card__period">/міс</span>
+              </div>
+              <p class="plan-card__desc">Для спортсменів і клубів</p>
+              <ul class="plan-card__features">
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Усе з тарифу Про
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Командний акаунт (до 10 осіб)
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  AI-рекомендації
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Участь у змаганнях
+                </li>
+                <li class="plan-card__feature plan-card__feature--yes">
+                  Підтримка 24/7
+                </li>
+              </ul>
+              <a href="#cta" class="btn btn--outline btn--full"
+                >Зв'язатися з нами</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="team" id="team">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title">Рибалки, які нам довіряють</h2>
+            <p class="section-header__desc">
+              Відомі українські рибалки та блогери, які використовують FishTrack
+            </p>
+          </header>
+
+          <div class="team__grid">
+            <article class="team-card reveal">
+              <figure class="team-card__photo-wrap">
+                <img
+                  src="images/амбсадор_1.jpg"
+                  alt="Петро Мельничук"
+                  class="team-card__photo"
+                />
+              </figure>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Петро Мельничук</h3>
+                <span class="team-card__role"
+                  >YouTube · «Українська Рибалка»</span
+                >
+                <p class="team-card__bio">
+                  Засновник YouTube-каналу «Українська Рибалка» (84k
+                  підписників), автор бренду прикормок та спорядження UA.FISH.
+                  Спеціалізація - фідер та флет-фідер, призер всеукраїнських
+                  змагань, ведучий на телеканалі «Трофей».
+                </p>
+              </div>
+            </article>
+
+            <article class="team-card reveal">
+              <figure class="team-card__photo-wrap">
+                <img
+                  src="images/амбасадор_2.jpg"
+                  alt="Назар Боженко"
+                  class="team-card__photo"
+                />
+              </figure>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Назар Боженко</h3>
+                <span class="team-card__role"
+                  >YouTube / TikTok · FishingLIFE Назар Боженко</span
+                >
+                <p class="team-card__bio">
+                  Абсолютний чемпіон світу 2021 з ловлі спінінгом з берега,
+                  Майстер спорту України міжнародного класу. Автор каналу з
+                  понад 100k підписників - стріт-фішинг, ультралайт, щука,
+                  судак, карпатська форель.
+                </p>
+              </div>
+            </article>
+
+            <article class="team-card reveal">
+              <figure class="team-card__photo-wrap">
+                <img
+                  src="images/амбасадор_3.jpg"
+                  alt="Ігор Сергієнко"
+                  class="team-card__photo"
+                />
+              </figure>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Ігор Сергієнко</h3>
+                <span class="team-card__role"
+                  >YouTube · «Serhiienko Fishing»</span
+                >
+                <p class="team-card__bio">
+                  Рибалка-спортсмен, член збірної України з флет-фідера. Фідерна
+                  та флет-фідерна ловля білої риби, звіти зі змагань і
+                  професійні поради щодо тактики та прикормки.
+                </p>
+              </div>
+            </article>
+
+            <article class="team-card reveal">
+              <figure class="team-card__photo-wrap">
+                <img
+                  src="images/амбасадор_4jpg.jpg"
+                  alt="Володимир Воротняк"
+                  class="team-card__photo"
+                />
+              </figure>
+              <div class="team-card__info">
+                <h3 class="team-card__name">Володимир Воротняк</h3>
+                <span class="team-card__role"
+                  >YouTube · «Риболовля з Воротняком»</span
+                >
+                <p class="team-card__bio">
+                  Чемпіон світу та восьмиразовий чемпіон України з берегового
+                  спінінга. Майстер спорту міжнародного класу, засновник Школи
+                  берегового спінінгу.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="cta">
+        <div class="container cta__inner">
+          <header class="section-header">
+            <h2 class="section-header__title">Почни безкоштовно сьогодні</h2>
+            <p class="section-header__desc">
+              Без кредитної картки. 14 днів повного доступу. Скасування в один
+              клік.
+            </p>
+          </header>
+
+          <form class="cta__form" id="ctaForm" novalidate>
+            <div class="form-group">
+              <label for="cta-name" class="form-group__label">Ім'я</label>
+              <input
+                type="text"
+                id="cta-name"
+                name="name"
+                class="form-group__input"
+                placeholder="Ваше ім'я"
+                required
+              />
+              <span class="form-group__error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cta-email" class="form-group__label">Email</label>
+              <input
+                type="email"
+                id="cta-email"
+                name="email"
+                class="form-group__input"
+                placeholder="your@email.com"
+                required
+              />
+              <span class="form-group__error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="cta-phone" class="form-group__label">Телефон</label>
+              <input
+                type="tel"
+                id="cta-phone"
+                name="phone"
+                class="form-group__input"
+                placeholder="+380"
+              />
+            </div>
+            <div class="form-group">
+              <label for="cta-message" class="form-group__label"
+                >Повідомлення (необов'язково)</label
+              >
+              <textarea
+                id="cta-message"
+                name="message"
+                class="form-group__input form-group__textarea"
+                placeholder="Розкажи про себе або постав питання..."
+                rows="4"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--full">
+              Отримати безкоштовний доступ
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#top" class="footer__logo">
+            <img
+              src="images/значок.jpg"
+              alt="FishTrack логотип"
+              class="footer__logo-img"
+            />
+            FishTrack
+          </a>
+          <p class="footer__tagline">Рибальська платформа нового покоління</p>
+          <ul class="footer__social">
+            <li>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__social-link"
+                aria-label="Facebook"
+                ><img
+                  src="svg/facebook.svg"
+                  alt="Facebook"
+                  class="footer__social-icon"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__social-link"
+                aria-label="Instagram"
+                ><img
+                  src="svg/instagram.svg"
+                  alt="Instagram"
+                  class="footer__social-icon"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__social-link"
+                aria-label="YouTube"
+                ><img
+                  src="svg/youtube.svg"
+                  alt="YouTube"
+                  class="footer__social-icon"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__social-link"
+                aria-label="Twitter"
+                ><img src="svg/x.svg" alt="Twitter" class="footer__social-icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="footer__nav" aria-label="Навігація футера">
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Продукт</h4>
+            <ul class="footer__nav-list">
+              <li>
+                <a href="#features" class="footer__nav-link">Можливості</a>
+              </li>
+              <li>
+                <a href="#how-it-works" class="footer__nav-link">Як працює</a>
+              </li>
+              <li><a href="#pricing" class="footer__nav-link">Тарифи</a></li>
+              <li><a href="#" class="footer__nav-link">API</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Ресурси</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#" class="footer__nav-link">Блог</a></li>
+              <li><a href="#" class="footer__nav-link">Спільнота</a></li>
+              <li><a href="#" class="footer__nav-link">Підтримка</a></li>
+              <li><a href="#" class="footer__nav-link">Документація</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-col">
+            <h4 class="footer__nav-title">Компанія</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#team" class="footer__nav-link">Амбасадори</a></li>
+              <li><a href="#cta" class="footer__nav-link">Контакт</a></li>
+              <li><a href="#" class="footer__nav-link">Конфіденційність</a></li>
+              <li>
+                <a href="#" class="footer__nav-link">Умови використання</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="footer__newsletter">
+          <h4 class="footer__nav-title">Підписатися на розсилку</h4>
+          <p class="footer__newsletter-desc">
+            Новини, поради та оновлення щотижня.
+          </p>
+          <form class="footer__newsletter-form" id="newsletterForm" novalidate>
+            <input
+              type="email"
+              id="newsletter-email"
+              class="footer__newsletter-input"
+              placeholder="your@email.com"
+              aria-label="Email для підписки"
+            />
+            <button type="submit" class="btn btn--primary">Підписатись</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <p class="footer__copy">© 2025 FishTrack. Усі права захищено.</p>
+          <nav aria-label="Додаткові посилання">
+            <ul class="footer__bottom-links">
+              <li><a href="#" class="footer__nav-link">Конфіденційність</a></li>
+              <li><a href="#" class="footer__nav-link">Умови</a></li>
+              <li><a href="#" class="footer__nav-link">Cookies</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal__overlay" id="modalOverlay"></div>
+      <div class="modal__panel">
+        <button class="modal__close" id="modalClose" aria-label="Закрити">
+          &times;
+        </button>
+        <h2 class="modal__title" id="modalTitle">Швидка реєстрація</h2>
+        <p class="modal__desc">
+          Введи email і отримай 14 днів безкоштовного доступу
+        </p>
+        <form class="modal__form" id="modalForm" novalidate>
+          <div class="form-group">
+            <label for="modal-name" class="form-group__label">Ім'я</label>
+            <input
+              type="text"
+              id="modal-name"
+              class="form-group__input"
+              placeholder="Ваше ім'я"
+              required
+            />
+            <span class="form-group__error" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="modal-email" class="form-group__label">Email</label>
+            <input
+              type="email"
+              id="modal-email"
+              class="form-group__input"
+              placeholder="your@email.com"
+              required
+            />
+            <span class="form-group__error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full btn--lg">
+            Почати безкоштовно
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <button class="go-top" id="goTop" aria-label="На початок сторінки">
+      &#8679;
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

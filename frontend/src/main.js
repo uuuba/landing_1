@@ -1,9 +1,14 @@
 import "./styles/base.css";
 import { getSettings, getPages } from "./api";
-import { render } from "./render";
+import { renderPage } from "./render";
+
+const app = document.querySelector("#app");
 
 async function start() {
-  // const settings = await getSettings();
+  if (!app) {
+    throw new Error("Could not find the #app element");
+  }
+
   try {
     const [settings, page] = await Promise.all([
       getSettings(),
@@ -11,10 +16,11 @@ async function start() {
     ]);
 
     document.title = `${page.title} - ${settings.siteName}`;
-    const heroBlock = page.blocks.find((block) => block.type === "hero");
-    app.innerHTML = hero(heroBlock);
+    app.innerHTML = renderPage(settings, page);
   } catch (error) {
-    app.textContent = `Something went wrong: ${error.message}`;
+    app.textContent = `Something went wrong: ${
+      error instanceof Error ? error.message : String(error)
+    }`;
   }
 }
 
